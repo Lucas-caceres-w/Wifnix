@@ -6,6 +6,7 @@ const modal = document.querySelector(".modal-contact"),
   describ2 = document.querySelector(".descripcion2"),
   languaje = document.querySelector(".lang"),
   español = document.querySelectorAll(".es"),
+  textEn = document.querySelector(".contact-en"),
   ingles = document.querySelectorAll(".en");
 
 const Cerrar = () => {
@@ -41,10 +42,14 @@ const Modal = () => {
   }
   if (text.textContent == "CONTÀCTENOS") {
     text.textContent = "VOLVER";
+  }
+  if (textEn.textContent == "CONTACT US") {
+    textEn.textContent = "BACK";
   } else {
     modal.style.transform = "scale(.9)";
     img.style.transform = "scale(1)";
     text.textContent = "CONTÀCTENOS";
+    textEn.textContent = "CONTACT US";
     describ.style.opacity = "1";
     describ2.style.opacity = "1";
     anime({
@@ -58,25 +63,23 @@ const Modal = () => {
   }
 };
 
-const href = location.pathname;
-
 const Languaje = () => {
   languaje.classList.toggle("idioma");
   español.forEach((en) => {
     if (en.style.display === "none") {
       en.style.display = "block";
-      location.hash = 'lang?es'
+      location.hash = "lang?es";
     } else {
       en.style.display = "none";
     }
   });
-  
+
   ingles.forEach((es) => {
     if (es.style.display === "block") {
       es.style.display = "none";
     } else {
       es.style.display = "block";
-      location.hash = 'lang?en'
+      location.hash = "lang?en";
     }
   });
 };
