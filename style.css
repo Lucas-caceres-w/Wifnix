@@ -255,6 +255,10 @@ body {
   width: max-content;
 }
 
+.callus {
+  margin-right: 20px;
+}
+
 .redes-conteiner {
   display: flex;
   flex-direction: row;
