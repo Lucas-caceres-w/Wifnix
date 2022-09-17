@@ -20,6 +20,7 @@ const Modal = () => {
   img.style.transform = "scale(.9)";
   describ.style.opacity = "0";
   describ2.style.opacity = "0";
+  arrow.style.transform = 'rotate(0)'
   if (innerWidth > 1000) {
     anime({
       targets: titulo,
@@ -52,6 +53,7 @@ const Modal = () => {
     textEn.textContent = "CONTACT US";
     describ.style.opacity = "1";
     describ2.style.opacity = "1";
+    arrow.style.transform = 'rotate(180deg)'
     anime({
       targets: titulo,
       translateX: 0,
