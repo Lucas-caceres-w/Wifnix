@@ -26,6 +26,11 @@ body {
   width: 80px;
   height: 60px;
   margin: 0%;
+  transition: all .4s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.2);
 }
 
 .en {
@@ -90,17 +95,20 @@ body {
   bottom: 40px;
   left: 50px;
   width: 140px;
+  line-height: 30px;
   color: var(--blue);
 }
 
 .descripcion {
-    position: absolute;
-    width: 300px;
-    bottom: -10px;
-    left: 50px;
-    font-family: 'Gantari' , sans-serif;
-    font-weight: 400;
-    transition: all .5s ease-in-out;
+  position: absolute;
+  width: 300px;
+  bottom: -10px;
+  left: 50px;
+  font-family: 'Gantari', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  transition: all 0.5s ease-in-out;
+  color: #111;
 }
 
 .contact {
@@ -108,6 +116,7 @@ body {
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  transition: .4s;
 }
 
 .text-contact {
@@ -128,28 +137,33 @@ body {
   pointer-events: none;
 }
 
+.contact:hover {
+  transform: scale(1.1);
+}
+
 .arrow {
-    margin-top: 15px;
-    width: 15px;
-    transform: rotate(180deg);
-    pointer-events: none;
+  margin-top: 15px;
+  width: 15px;
+  transform: rotate(180deg);
+  pointer-events: none;
+  transition: 0.5s ease-in-out;
 }
 
 .modal-contact {
-    width: 60%;
-    height: max-content;
-    padding: 30px;
-    margin: 50px auto;
-    position: absolute;
-    border-radius: 50px;
-    background-color: #178FCCee;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: all .5s ease-in-out;
+  width: 60%;
+  height: max-content;
+  padding: 30px;
+  margin: 50px auto;
+  position: absolute;
+  border-radius: 50px;
+  background-color: #178fccee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 .visible {
@@ -158,26 +172,30 @@ body {
 }
 
 .close {
-    width: 30px;
-    position: absolute;
-    right: -30px;
-    top: -30px;
-    color: var(--blue);
-    cursor: pointer;
+  width: 30px;
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  color: var(--blue);
+  cursor: pointer;
 }
 
 .cruz {
   pointer-events: none;
 }
 
+.redes:hover {
+  transform: scale(1.1);
+}
+
 .margin-modal {
-    width: 80%;
-    height: 60%;
-    margin: 20px auto;
-    display: flex;
-    gap: 50px;
-    flex-direction: column;
-    transition: all .5s ease-in-out;
+  width: 80%;
+  height: 60%;
+  margin: 20px auto;
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+  transition: all 0.5s ease-in-out;
 }
 
 .title-contact {
@@ -190,11 +208,11 @@ body {
 }
 
 .followus {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
-    margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+  margin-left: 40px;
 }
 
 .follow {
@@ -204,15 +222,15 @@ body {
 }
 
 .contactus {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 110px;
-    color: #fff;
-    font-family: 'Gantari', sans-serif;
-    font-size: 20px;
-    transition: .5s;
-    transform: translate(-50px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 110px;
+  color: #fff;
+  font-family: 'Gantari', sans-serif;
+  font-size: 20px;
+  transition: 0.5s;
+  transform: translate(-50px);
 }
 
 .contact-icons {
@@ -221,14 +239,19 @@ body {
 
 .mail-link {
   color: #fff;
-  transition: 0.2s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
-.email-icon , .call-icon {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    width: max-content;
+.mail-link:hover {
+  color: #4b5267;
+}
+
+.email-icon,
+.call-icon {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: max-content;
 }
 
 .redes-conteiner {
@@ -239,12 +262,13 @@ body {
 }
 
 .redes {
-  width: 50px;
+  width: 40px;
+  transition: .3s;
 }
 
 .numbers {
-    list-style: none;
-    width: max-content;
+  list-style: none;
+  width: max-content;
 }
 
 .footer {
@@ -259,6 +283,7 @@ body {
   font-size: 10px;
   margin-top: 20px;
   position: absolute;
+  bottom: 0;
 }
 
 @media screen and (max-width: 1000px) {
@@ -278,9 +303,9 @@ body {
     justify-content: center;
     align-items: center;
     color: #fff;
-    font-family: 'Gantari' ,sans-serif;
+    font-family: 'Gantari', sans-serif;
     font-size: 10px;
-}
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -291,44 +316,46 @@ body {
     padding: 0;
   }
 
-    .modal-contact {
-        width: 75%;
-    }
+  .modal-contact {
+    width: 75%;
+  }
 
-    .img-portada {
-        width: 50vw;
-    }
+  .img-portada {
+    width: 50vw;
+  }
 
-    .div-main {
-        width: 100%;
-        position: static;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+  .div-main {
+    width: 100%;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .titulo , .descripcion {
-        position: static;
-    }
+  .titulo,
+  .descripcion {
+    position: static;
+  }
 
-    .titulo {
-        width: 300px;
-    }
+  .titulo {
+    width: 300px;
+    margin: 10px;
+  }
 }
 
 @media screen and (max-width: 610px) {
   .modal-contact {
-    height: max-content;
+    height: min-content;
+    padding: 15px;
+    margin-top: 40px;
   }
 
   .margin-modal {
     align-items: center;
-    gap: 10px;
-  }
-
-  .titulo {
-    margin: 10px;
+    width: 100%;
+    gap: 20px;
+    padding-top: 20px;
   }
 
   .contactus {
@@ -336,13 +363,18 @@ body {
     justify-content: center;
     flex-direction: column-reverse;
     gap: 0;
-    margin-bottom: 50px;
+    margin-left: 110px;
+    margin-bottom: 20px;
     text-align: center;
   }
 
   .followus,
   .callus {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    width: max-content;
+    align-items: center;
   }
 
   .numbers {
@@ -357,19 +389,16 @@ body {
     flex-direction: row;
     gap: 10px;
     justify-content: center;
+    margin: 0;
+  }
+
+  .call-icon {
+    margin-right: 20px;
   }
 
   .title-contact {
-    margin-top: 50px;
-  }
-
-  .close {
-    top: -10px;
-    right: -10px;
-  }
-
-  .contact {
-    margin-top: 10px;
+    margin-top: 30px;
+    font-size: 30px;
   }
 
   .img-portada {
@@ -379,82 +408,24 @@ body {
   .flags {
     right: 0;
   }
+
+  .followus {
+    margin: 20px auto;
+  }
 }
 
-@media screen and (max-width:610px) {
-    .modal-contact {
-        height: min-content;
-        padding: 15px;
-        margin-top: 40px;
-    }
-    
-    .margin-modal {
-        align-items: center;
-        width: 100%;
-        gap: 20px;
-    }
+@media screen and (max-width: 480px) {
+  .margin-modal {
+    margin: 0;
+    height: 55%;
+  }
 
-    .contactus {
-        flex-wrap: wrap;
-        justify-content: center;
-        flex-direction: column-reverse;
-        gap: 0;
-        margin-left: 110px;    
-        margin-bottom: 20px;
-        text-align: center;
-    }
+  .close {
+    top: -15px;
+    right: -15px;
+  }
 
-    .followus , .callus {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: max-content;
-        align-items: center;
-    }
-
-    .numbers {
-        padding: 0;
-        padding-left: 20px;
-        text-align: left;
-    }
-
-    .email-icon , .call-icon {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        justify-content: center;
-        margin: 0;
-    }
-
-    .call-icon {
-        margin-right: 20px;
-    }
-
-    .title-contact {
-        margin-top: 30px;
-    }  
-
-    .img-portada {
-        width: 80%;
-    }
-
-    .flags {
-        right: 0;
-    }
-
-    .titulo {
-        margin: 10px;
-    }
-}
-
-@media screen and (max-width:480px) {
-    .margin-modal {
-        margin: 0;
-        height: 55%;
-    }
-
-    .close {
-        top: -15px;
-        right: -15px;
-    }
+  .numbers {
+    padding: 0;
+  }
 }

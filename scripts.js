@@ -4,10 +4,12 @@ const modal = document.querySelector(".modal-contact"),
   titulo = document.querySelectorAll(".titulo"),
   describ = document.querySelector(".descripcion"),
   describ2 = document.querySelector(".descripcion2"),
+  contact = document.querySelector(".contact"),
   languaje = document.querySelector(".lang"),
   español = document.querySelectorAll(".es"),
   ingles = document.querySelectorAll(".en"),
-  arrow = document.querySelector('.arrow');
+  arrow = document.querySelector(".arrow"),
+  texten = document.querySelector(".textarrow");
 
 const Cerrar = () => {
   modal.classList.remove("visible");
@@ -20,7 +22,10 @@ const Modal = () => {
   img.style.transform = "scale(.9)";
   describ.style.opacity = "0";
   describ2.style.opacity = "0";
-  arrow.style.transform = 'rotate(0)'
+  arrow.style.transform = "rotate(0)";
+  if (innerWidth < 500) {
+    contact.style.marginTop = "100px";
+  }
   if (innerWidth > 1000) {
     anime({
       targets: titulo,
@@ -41,15 +46,28 @@ const Modal = () => {
       duration: 300,
     });
   }
-  if (text.textContent == "CONTÀCTENOS") {
-    text.textContent = "VOLVER";
+  if (texten.textContent == "CONTACT US") {
+    if (innerWidth < 600) {
+      texten.textContent = " ";
+    } else {
+      texten.textContent = "BACK"
+    }
+  }
+  if (text.textContent == "CONTÁCTENOS") {
+    if (innerWidth < 600) {
+      text.textContent = " ";
+    } else {
+      text.textContent = "VOLVER"
+    }
   } else {
+    texten.textContent = "CONTACT US";
     modal.style.transform = "scale(.9)";
     img.style.transform = "scale(1)";
-    text.textContent = "CONTÀCTENOS";
+    text.textContent = "CONTÁCTENOS";
     describ.style.opacity = "1";
     describ2.style.opacity = "1";
-    arrow.style.transform = 'rotate(180deg)'
+    arrow.style.transform = "rotate(180deg)";
+    contact.style.margin = "0";
     anime({
       targets: titulo,
       translateX: 0,
@@ -61,25 +79,23 @@ const Modal = () => {
   }
 };
 
-const href = location.pathname;
-
 const Languaje = () => {
   languaje.classList.toggle("idioma");
   español.forEach((en) => {
     if (en.style.display === "none") {
       en.style.display = "block";
-      location.hash = 'lang?es'
+      location.hash = "lang?es";
     } else {
       en.style.display = "none";
     }
   });
-  
+
   ingles.forEach((es) => {
     if (es.style.display === "block") {
       es.style.display = "none";
     } else {
       es.style.display = "block";
-      location.hash = 'lang?en'
+      location.hash = "lang?en";
     }
   });
 };
