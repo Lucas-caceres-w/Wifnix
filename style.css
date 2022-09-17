@@ -200,6 +200,7 @@ body {
 
 .title-contact {
   margin: 0;
+  padding-top: 10px;
   color: #fff;
   font-family: 'Gantari', sans-serif;
   font-size: 40px;
@@ -224,7 +225,7 @@ body {
 .contactus {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 110px;
   color: #fff;
   font-family: 'Gantari', sans-serif;
