@@ -62,6 +62,7 @@ body {
 
 .prflag {
   width: 60px;
+  margin-top: 40px;
   cursor: pointer;
   z-index: 100;
 }
@@ -304,7 +305,7 @@ body {
   }
 
   .img-portada {
-    width: 50vw;
+    width: 60%;
   }
 
   .div-main {
@@ -320,8 +321,8 @@ body {
   }
 }
 
-@media only screen and (max-width: 750px),
-  only screen and (max-device-width: 750px) {
+@media only screen and (max-width: 1180px),
+  only screen and (max-device-width: 1180px) {
   .modal-contact {
     width: 80%;
   }

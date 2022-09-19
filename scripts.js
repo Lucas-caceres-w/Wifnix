@@ -9,7 +9,8 @@ const modal = document.querySelector(".modal-contact"),
   español = document.querySelectorAll(".es"),
   ingles = document.querySelectorAll(".en"),
   arrow = document.querySelector(".arrow"),
-  texten = document.querySelector(".textarrow");
+  texten = document.querySelector(".textarrow"),
+  PR = document.querySelector('.prflag');
 
 const Cerrar = () => {
   modal.classList.remove("visible");
@@ -85,8 +86,10 @@ const Languaje = () => {
     if (en.style.display === "none") {
       en.style.display = "block";
       location.hash = "lang?es";
+      PR.style.marginTop = '40px'
     } else {
       en.style.display = "none";
+      PR.style.marginTop = '0'
     }
   });
 
