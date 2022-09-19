@@ -26,7 +26,7 @@ body {
   width: 80px;
   height: 60px;
   margin: 0%;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .logo:hover {
@@ -116,7 +116,7 @@ body {
   flex-direction: column;
   align-items: center;
   cursor: pointer;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .text-contact {
@@ -152,6 +152,8 @@ body {
 .modal-contact {
   width: 60%;
   height: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   padding: 30px;
   margin: 50px auto;
   position: absolute;
@@ -252,6 +254,8 @@ body {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 
@@ -268,11 +272,13 @@ body {
 
 .redes {
   width: 40px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .numbers {
   list-style: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 
@@ -292,6 +298,29 @@ body {
 }
 
 @media screen and (max-width: 1180px) {
+  .modal-contact {
+    width: 80%;
+  }
+
+  .img-portada {
+    width: 50vw;
+  }
+
+  .div-main {
+    width: 100%;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Gantari', sans-serif;
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 750px),
+  only screen and (max-device-width: 750px) {
   .modal-contact {
     width: 80%;
   }
@@ -349,8 +378,47 @@ body {
   }
 }
 
+@media only screen and (max-width: 750px),
+  only screen and (max-device-width: 750px) {
+  .contactus {
+    gap: 50px;
+  }
+  .numbers {
+    padding: 0;
+  }
+
+  .modal-contact {
+    width: 75%;
+  }
+
+  .img-portada {
+    width: 50vw;
+  }
+
+  .div-main {
+    width: 100%;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .titulo,
+  .descripcion {
+    position: static;
+  }
+
+  .titulo {
+    width: 300px;
+    margin: 10px;
+  }
+}
+
 @media screen and (max-width: 610px) {
   .modal-contact {
+    height: -webkit-min-content;
+    height: -moz-min-content;
     height: min-content;
     padding: 15px;
     margin-top: 40px;
@@ -378,6 +446,83 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    align-items: center;
+  }
+
+  .numbers {
+    padding: 0;
+    padding-left: 20px;
+    text-align: left;
+  }
+
+  .email-icon,
+  .call-icon {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .call-icon {
+    margin-right: 20px;
+  }
+
+  .title-contact {
+    margin-top: 30px;
+    font-size: 30px;
+  }
+
+  .img-portada {
+    width: 80%;
+  }
+
+  .flags {
+    right: 0;
+  }
+
+  .followus {
+    margin: 20px auto;
+  }
+}
+
+@media only screen and (max-width: 610px),
+  only screen and (max-device-width: 610px) {
+  .modal-contact {
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    padding: 15px;
+    margin-top: 40px;
+  }
+
+  .margin-modal {
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    padding-top: 20px;
+  }
+
+  .contactus {
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column-reverse;
+    gap: 0;
+    margin-left: 110px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .followus,
+  .callus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     align-items: center;
   }
@@ -420,7 +565,27 @@ body {
 }
 
 @media screen and (max-width: 480px) {
+  .modal-contact {
+    height: 500px;
+  }
 
+  .margin-modal {
+    margin: 0;
+    height: 100%;
+  }
+
+  .close {
+    top: -15px;
+    right: -15px;
+  }
+
+  .numbers {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 480px),
+  only screen and (max-device-width: 480px) {
   .modal-contact {
     height: 500px;
   }
