@@ -230,11 +230,12 @@ body {
   flex-direction: row;
   justify-content: space-around;
   gap: 110px;
-  color: #fff;
   font-family: 'Gantari', sans-serif;
   font-size: 20px;
   transition: 0.5s;
   transform: translate(-50px);
+  color: #fff;
+  -webkit-text-fill-color: #fff;
 }
 
 .contact-icons {
@@ -281,11 +282,9 @@ body {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  color: #fff !important;
 }
 
 .numbers li {
-  color: #fff !important;
 }
 
 .footer {

@@ -1,17 +1,17 @@
 const modal = document.querySelector(".modal-contact"),
-  text = document.querySelector(".text-contact"),
-  img = document.querySelector(".img-portada"),
-  titulo = document.querySelectorAll(".titulo"),
-  describ = document.querySelector(".descripcion"),
   describ2 = document.querySelector(".descripcion2"),
+  describ = document.querySelector(".descripcion"),
+  text = document.querySelector(".text-contact"),
+  titulo = document.querySelectorAll(".titulo"),
+  texten = document.querySelector(".textarrow"),
+  img = document.querySelector(".img-portada"),
   contact = document.querySelector(".contact"),
-  languaje = document.querySelector(".lang"),
   español = document.querySelectorAll(".es"),
+  languaje = document.querySelector(".lang"),
   ingles = document.querySelectorAll(".en"),
   arrow = document.querySelector(".arrow"),
-  texten = document.querySelector(".textarrow"),
-  PR = document.querySelector('.prflag')
-  US = document.querySelector('.usflag');
+  PR = document.querySelector(".prflag");
+  US = document.querySelector(".usflag");
 
 const Cerrar = () => {
   modal.classList.remove("visible");
@@ -52,14 +52,14 @@ const Modal = () => {
     if (innerWidth < 600) {
       texten.textContent = " ";
     } else {
-      texten.textContent = "BACK"
+      texten.textContent = "BACK";
     }
   }
   if (text.textContent == "CONTÁCTENOS") {
     if (innerWidth < 600) {
       text.textContent = " ";
     } else {
-      text.textContent = "VOLVER"
+      text.textContent = "VOLVER";
     }
   } else {
     texten.textContent = "CONTACT US";
@@ -87,12 +87,12 @@ const Languaje = () => {
     if (en.style.display === "none") {
       en.style.display = "block";
       location.hash = "lang?es";
-      PR.style.marginTop = '40px'
-      US.style.marginTop = '0'
+      PR.style.marginTop = "40px";
+      US.style.marginTop = "0";
     } else {
       en.style.display = "none";
-      PR.style.marginTop = '0'
-      US.style.marginTop = '40px'
+      PR.style.marginTop = "0";
+      US.style.marginTop = "40px";
     }
   });
 
