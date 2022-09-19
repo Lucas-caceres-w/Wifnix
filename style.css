@@ -281,11 +281,11 @@ body {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  color: #fff;
+  color: #fff !important;
 }
 
 .numbers li {
-  color: #fff;
+  color: #fff !important;
 }
 
 .footer {
