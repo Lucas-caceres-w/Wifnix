@@ -10,7 +10,8 @@ const modal = document.querySelector(".modal-contact"),
   ingles = document.querySelectorAll(".en"),
   arrow = document.querySelector(".arrow"),
   texten = document.querySelector(".textarrow"),
-  PR = document.querySelector('.prflag');
+  PR = document.querySelector('.prflag')
+  US = document.querySelector('.usflag');
 
 const Cerrar = () => {
   modal.classList.remove("visible");
@@ -87,9 +88,11 @@ const Languaje = () => {
       en.style.display = "block";
       location.hash = "lang?es";
       PR.style.marginTop = '40px'
+      US.style.marginTop = '0'
     } else {
       en.style.display = "none";
       PR.style.marginTop = '0'
+      US.style.marginTop = '40px'
     }
   });
 

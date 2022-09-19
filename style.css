@@ -151,9 +151,9 @@ body {
 }
 
 .modal-contact {
-  height: 450px;/* 
+  height: 450px;
   height: -webkit-max-content;
-  height: -moz-max-content; */
+  height: -moz-max-content;
   width: 60%;
   padding: 30px;
   margin: 50px auto;
@@ -281,6 +281,10 @@ body {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  color: #fff;
+}
+
+.numbers li {
   color: #fff;
 }
 
